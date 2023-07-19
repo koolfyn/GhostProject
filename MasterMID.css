@@ -6,7 +6,7 @@ body {
 #gameBoard {
     width:fit-content;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 30px;
     
 }
 #reset, #submit {
@@ -20,15 +20,16 @@ body {
 #submit {
     display: center;
     float: right;
-    margin-right: 130px;
+    margin-right: 140px;
 }
 #reset {
-    margin-left: 10px;
+    margin-left: 30px;
 }
 .mmRow {
     display: flex;
     flex-wrap: nowrap;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    margin-left: 20%;
 }
 .guess {
     display: flex;
@@ -94,7 +95,7 @@ option {
   width: 25px;
   background-color: #bbb;
   border-radius: 50%;
-  visibility: visible;
+  visibility: hidden;
 }
 
 #OLIVIACAT {
