@@ -52,6 +52,31 @@ option {
 .purple {
     background-color: purple
 }
+
+
+
+#whiteCircle {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: white;
+}
+#blackCircle {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: black;
+}
+
+#coloredCircles {
+    display: flex;
+    margin: auto;
+}
+
 .circle {
   height: 25px;
   width: 25px;
