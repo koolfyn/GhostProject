@@ -1,11 +1,14 @@
 let reset = document.getElementById("reset");
 let submit = document.getElementById("submit");
 reset.addEventListener('click', resetGame, false);
-submit.addEventListener("click", submit, false);
+submit.addEventListener("click", submitRes, false);
 let secretCode = [];
 let colors = ["red", "blue", "yellow", "green", "orange", "purple"];
 let guess = [];
 let feedback = [];
+let blackDots = null;
+let secretColor = null;
+let guessColor = null;
 /****  WRITE A COMMAND HERE THAT WILL RESET THE GAME USING resetGame() *****/
 resetGame();
 
@@ -35,39 +38,75 @@ function check1() {
     for(let i = 0; i < 4; i++){
         if(secretCode[i] == guess[i]){
             feedback.push("black");
+            blackDots += 1;
         }
     }
 }
 
 function check2() {
     for(let i = 0; i < 4; i++){
-        for(let j = 0; j < 4; j++){
-            if(secretCode[i] == guess[j] && i != j){
-                feedback.push("white")
+        for(let j = 0; j < 6; j++){
+            if(secretCode[i] == colors[j]){
+                secretColor += 1;
             }
         }
     }
+    for(let i = 0; i < 4; i++){
+        for(let j = 0; j < 6; j++){
+            if(guess[i] == colors[j]){
+                guessColor += 1;
+            }
+        }
+    }
+    let minColor = Math.min(secretColor, guessColor)
+    let whiteDots = minColor - blackDots
+    for(let k = 0; k < whiteDots; k++){
+        feedback.push("white");
+    }
 }
 
+// function check2() {
+//     for(let i = 0; i < 4; i++){
+//         for(let j = 0; j < 4; j++){
+//             if(secretCode[i] == guess[j] && i != j){
+//                 feedback.push("white")
+//             }
+//         }
+//     }
+// }
+
 // let colors = ["red", "blue", "yellow", "green", "orange", "purple"];
-// guess: r, r, b, y
+// guess: r, r, y, b
 // secreteCode: b, y, b, y
 
 function createRow(guess, feedback){
-    let gameBoard = document.getElementById("gameBoard")
-    let row = document.createElement("div")
-    for(let color in feedback){
-        let element = document.createElement("div");
-        element.className = color + "Circle"
+    let gameBoard = document.getElementById("gameBoard");
+    let row = document.createElement("div");
+    let guessContainer =  document.createElement("div");
+    let feedbackContainer =  document.createElement("div");
+    for(let g of guess){
+        let el = document.createElement("div");
+        el.className = g + "Circle";
+        guessContainer.append(el);
     }
-    gameBoard.appendChild(row)
+    for(let color of feedback){
+        let element = document.createElement("div");
+        element.className = color + "Circle";
+        feedbackContainer.append(element);
+    }
+    row.append(guessContainer);
+    row.append(feedbackContainer);
+    gameBoard.appendChild(row);
 }
 
-function submit() {
+function submitRes() {
     choices();
     check1();
     check2();
     createRow(guess, feedback);
+    blackDots = 0;
+    guessColor = 0;
+    secretColor = 0;
 }
 
 
