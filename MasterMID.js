@@ -98,6 +98,7 @@ function createRow(guess, feedback){
     row.className = "mmRow";
     let guessContainer =  document.createElement("div");
     let feedbackContainer =  document.createElement("div");
+    feedbackContainer.className = "fContainer";
     for(let g of guess){
         let el = document.createElement("div");
         el.className = g + " circle";

@@ -39,6 +39,9 @@ body {
 .feedback {
     width: 120px;
     display: flex;
+    flex-direction: row;
+    display: inline-block;
+
 }
 option {
     color: white
@@ -110,4 +113,7 @@ option {
     height: 15%;
     width: 15%;
     margin-top: 50px;
+}
+.fContainer {
+    display: flex;
 }
