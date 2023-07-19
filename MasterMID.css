@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: antiquewhite;
 }
 
 #gameBoard {
@@ -12,9 +12,12 @@ body {
 #reset, #submit {
     display: flex;
     display: inline-block;
-    justify-content: space-around;
+    display: center;
+    width: 100px;
+    height: 30px;
     margin: auto;
     margin-bottom: 20px
+    
     
 }
 
@@ -36,7 +39,7 @@ body {
     display: flex;
 }
 option {
-    color: white
+    color: grey
 }
 .red {
     background-color: red
