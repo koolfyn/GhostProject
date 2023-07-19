@@ -6,7 +6,6 @@ body {
 #gameBoard {
     width:fit-content;
     margin: auto;
-    margin: auto;
     margin-top: 20px;
     
 }
@@ -65,7 +64,7 @@ option {
 
 .whiteCircle {
     display: flex;
-    display: inline-block;
+    display: block;
     margin: auto;
     height: 25px;
     width: 25px;
@@ -75,7 +74,7 @@ option {
 }
 .blackCircle {
     display: flex;
-    display: inline-block;
+    display: block;
     margin: auto;
     height: 25px;
     width: 25px;
@@ -90,11 +89,11 @@ option {
 }
 
 .circle {
+  display: inline-block;
   height: 25px;
   width: 25px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
   visibility: visible;
 }
 
