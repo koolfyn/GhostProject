@@ -1,7 +1,14 @@
+body {
+    background-color: aqua;
+    margin: auto;
+}
+
 #gameBoard {
     width:fit-content;
     margin: auto;
+    margin: auto;
     margin-top: 20px
+    
 }
 #reset, #submit {
     margin-bottom: 20px
@@ -44,3 +51,11 @@ option {
 }
 .purple {
     background-color: purple
+}
+.circle {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
