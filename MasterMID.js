@@ -35,6 +35,7 @@ function check() {
         if secretCode[i] == guess[i]
         circleOutput.textContent = 
     }
+    
 
 chooseColor();
 choices();
@@ -46,4 +47,3 @@ choices();
     //first make sure there is nothing in the secretCode array by making it an empty array
 
     //push 4 random strings from the colors array into the secretCode array
-    
