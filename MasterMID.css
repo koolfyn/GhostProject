@@ -16,12 +16,15 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100px;
     height: 30px;
-    margin: auto;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 #submit {
-    margin: auto;
-    float: right
+    display: center;
+    float: right;
+    margin-right: 130px;
+}
+#reset {
+    margin-left: 10px;
 }
 .mmRow {
     display: flex;
@@ -92,6 +95,7 @@ option {
 }
 
 #OLIVIACAT {
+    display: flex;
     float: right;
     margin-top: 0px;
     height: 300px;

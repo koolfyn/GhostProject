@@ -27,7 +27,7 @@ function chooseColor() {
 function choices() {
     let choices = document.getElementsById("select");
     for(let color of choices){
-        guess.push(color);
+        guess.push(color.value);
     }
 }
 
@@ -49,17 +49,28 @@ function check2() {
     }
 }
 
-for(let color in feedback){
-    let element = document.createElement("div");
-    element.className = color + "Circle"
+// let colors = ["red", "blue", "yellow", "green", "orange", "purple"];
+// guess: r, r, b, y
+// secreteCode: b, y, b, y
+
+function createRow(guess, feedback){
+    let gameBoard = document.getElementById("gameBoard")
+    let row = document.createElement("div")
+    for(let color in feedback){
+        let element = document.createElement("div");
+        element.className = color + "Circle"
+    }
+    gameBoard.appendChild(row)
 }
 
 function submit() {
-    chooseColor();
     choices();
     check1();
     check2();
+    createRow(guess, feedback);
 }
+
+
 
 /***** STORE IT AS AN ARRAY IN THE VARIABLE NAMED secretCode. ******/
 //For example, a valid value for secretCode could be ["blue", "red", "green", "blue"]
