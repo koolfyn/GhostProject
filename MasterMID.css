@@ -1,5 +1,5 @@
 body {
-    background-color: aqua;
+    background-color: antiquewhite;
     margin: auto;
 }
 
@@ -11,18 +11,16 @@ body {
     
 }
 #reset, #submit {
-<<<<<<< HEAD
-=======
     display: flex;
     display: inline-block;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100px;
     height: 30px;
     margin: auto;
->>>>>>> ddde11b68dd93f8b79645badeb94bac34e25e9f1
     margin-bottom: 20px
 }
 #submit {
+    margin: auto;
     float: right
 }
 .mmRow {
@@ -62,15 +60,7 @@ option {
     background-color: purple
 }
 
-<<<<<<< HEAD
-
-
-
-
-#whiteCircle {
-=======
 .whiteCircle {
->>>>>>> ddde11b68dd93f8b79645badeb94bac34e25e9f1
     height: 25px;
     width: 25px;
     background-color: #bbb;
@@ -98,6 +88,7 @@ option {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  visibility: hidden;
 }
 
 #OLIVIACAT {
