@@ -1,6 +1,5 @@
 body {
-    background-color: aqua;
-    margin: auto;
+    background-color: gray;
 }
 
 #gameBoard {
@@ -11,8 +10,14 @@ body {
     
 }
 #reset, #submit {
+    display: flex;
+    display: inline-block;
+    justify-content: space-around;
+    margin: auto;
     margin-bottom: 20px
+    
 }
+
 #submit {
     float: right
 }
@@ -53,8 +58,6 @@ option {
     background-color: purple
 }
 
-
-
 #whiteCircle {
     height: 25px;
     width: 25px;
@@ -83,4 +86,5 @@ option {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  visibility: hidden;
 }

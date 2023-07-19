@@ -28,18 +28,31 @@ function choices() {
     }
 }
 
-let circleOutput = document.getElementById("circleOutput")
+let blackCircle = document.getElementById("blackCircle")
+let whiteCircle = document.getElementById("whiteCircle")
 
-function check() {
+function check1() {
     for(let i = 0; i < 4; i++){
-        if secretCode[i] == guess[i]
-        circleOutput.textContent = 
+        if(secretCode[i] == guess[i]){
+            output.textContent = blackCircle
+        }
     }
-    
+}
+
+function check2() {
+    for(let i = 0; i < 4; i++){
+        for(let j = 0; j < 4; j++){
+            if(secretCode[i] == guess[j] && i != j){
+                output.textContent = whiteCircle
+            }
+        }
+    }
+}
 
 chooseColor();
 choices();
-
+check1();
+check2();
 
 /***** STORE IT AS AN ARRAY IN THE VARIABLE NAMED secretCode. ******/
 //For example, a valid value for secretCode could be ["blue", "red", "green", "blue"]
