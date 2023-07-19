@@ -1,7 +1,3 @@
-body {
-    background-color: aqua;
-}
-
 #gameBoard {
     width:fit-content;
     margin: auto;
@@ -48,4 +44,3 @@ option {
 }
 .purple {
     background-color: purple
-}
