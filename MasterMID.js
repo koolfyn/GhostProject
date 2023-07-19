@@ -1,8 +1,11 @@
 let reset = document.getElementById("reset");
+let submit = document.getElementById("submit");
 reset.addEventListener('click', resetGame, false);
+submit.addEventListener("click", submit, false);
 let secretCode = [];
 let colors = ["red", "blue", "yellow", "green", "orange", "purple"];
 let guess = [];
+let feedback = [];
 /****  WRITE A COMMAND HERE THAT WILL RESET THE GAME USING resetGame() *****/
 resetGame();
 
@@ -22,19 +25,16 @@ function chooseColor() {
 }
 
 function choices() {
-    for(let color of colors){
-        let choices = document.getElementsById("select")
-        guess.push(choices)
+    let choices = document.getElementsById("select");
+    for(let color of choices){
+        guess.push(color);
     }
 }
-
-let blackCircle = document.getElementById("blackCircle")
-let whiteCircle = document.getElementById("whiteCircle")
 
 function check1() {
     for(let i = 0; i < 4; i++){
         if(secretCode[i] == guess[i]){
-            output.textContent = blackCircle
+            feedback.push("black");
         }
     }
 }
@@ -43,16 +43,23 @@ function check2() {
     for(let i = 0; i < 4; i++){
         for(let j = 0; j < 4; j++){
             if(secretCode[i] == guess[j] && i != j){
-                output.textContent = whiteCircle
+                feedback.push("white")
             }
         }
     }
 }
 
-chooseColor();
-choices();
-check1();
-check2();
+for(let color in feedback){
+    let element = document.createElement("div");
+    element.className = color + "Circle"
+}
+
+function submit() {
+    chooseColor();
+    choices();
+    check1();
+    check2();
+}
 
 /***** STORE IT AS AN ARRAY IN THE VARIABLE NAMED secretCode. ******/
 //For example, a valid value for secretCode could be ["blue", "red", "green", "blue"]
