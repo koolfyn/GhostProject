@@ -93,5 +93,10 @@ option {
     margin-top: 0px;
     height: 300px;
     width: 300px;
-
+}
+#BOBAPANDA {
+    display: flex;
+    float: left;
+    height: 300px;
+    width: 250px;
 }
