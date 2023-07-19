@@ -7,7 +7,7 @@ body {
     width:fit-content;
     margin: auto;
     margin: auto;
-    margin-top: 20px
+    margin-top: 20px;
     
 }
 #reset, #submit {
@@ -29,12 +29,12 @@ body {
 .mmRow {
     display: flex;
     flex-wrap: nowrap;
-    margin-bottom: 20px
+    margin-bottom: 30px
 }
 .guess {
     display: flex;
     justify-content: space-around;
-    width: 300px
+    width: 300px;
 }
 .feedback {
     width: 120px;
@@ -64,19 +64,23 @@ option {
 }
 
 .whiteCircle {
+    display: flex;
+    display: inline-block;
+    margin: auto;
     height: 25px;
     width: 25px;
     background-color: #bbb;
     border-radius: 50%;
-    display: inline-block;
     background-color: white;
 }
 .blackCircle {
+    display: flex;
+    display: inline-block;
+    margin: auto;
     height: 25px;
     width: 25px;
     background-color: #bbb;
     border-radius: 50%;
-    display: inline-block;
     background-color: black;
 }
 
@@ -91,19 +95,20 @@ option {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  visibility: hidden;
+  visibility: visible;
 }
 
 #OLIVIACAT {
     display: flex;
     float: right;
-    margin-top: 0px;
-    height: 300px;
-    width: 300px;
+    height: 15%;
+    width: 20%;
+    margin-top: 50px;
 }
 #BOBAPANDA {
     display: flex;
     float: left;
-    height: 300px;
-    width: 250px;
+    height: 15%;
+    width: 15%;
+    margin-top: 50px;
 }
