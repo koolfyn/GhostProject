@@ -44,10 +44,10 @@ option {
     color: white
 }
 .red {
-    background-color: red
+    background-color: red;
 }
 .blue {
-    background-color: blue
+    background-color: blue;
 }
 .yellow {
     background-color: yellow;
@@ -93,7 +93,6 @@ option {
   display: inline-block;
   height: 25px;
   width: 25px;
-  background-color: #bbb;
   border-radius: 50%;
   visibility: visible;
 }
