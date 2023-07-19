@@ -95,7 +95,7 @@ option {
   width: 25px;
   background-color: #bbb;
   border-radius: 50%;
-  visibility: hidden;
+  visibility: visible;
 }
 
 #OLIVIACAT {
